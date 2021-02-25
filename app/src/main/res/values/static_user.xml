@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="staticUserOpenAppName">Open App</string>
+    <string name="staticUserPlayMinuteName">Play Minute</string>
+</resources>

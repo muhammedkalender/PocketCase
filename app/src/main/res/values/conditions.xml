@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region Battle Scared-->
+    <string name="conditionBattleScarredName">Battle-Scarred</string>
+    <string name="conditionBattleScarredShortName">BS</string>
+    <integer name="conditionBattleScarredChange">500</integer>
+    <!--endregion-->
+
+    <!--region Well Worn-->
+    <string name="conditionWellWornName">Well-Worn</string>
+    <string name="conditionWellWornShortName">WW</string>
+    <integer name="conditionWellWornChange">500</integer>
+    <!--endregion-->
+
+    <!--region Field Tested-->
+    <string name="conditionFieldTestedName">Field-Tested</string>
+    <string name="conditionFieldTestedShortName">FT</string>
+    <integer name="conditionFieldTestedChange">500</integer>
+    <!--endregion-->
+
+    <!--region Minimal Wear-->
+    <string name="conditionMinimalWearName">Minimal Wear</string>
+    <string name="conditionMinimalWearShortName">MW</string>
+    <integer name="conditionMinimalWearChange">500</integer>
+    <!--endregion-->
+
+    <!--region Factory New-->
+    <string name="conditionFactoryNewName">Factory New</string>
+    <string name="conditionFactoryNewShortName">FN</string>
+    <integer name="conditionFactoryNewChange">500</integer>
+    <!--endregion-->
+</resources>

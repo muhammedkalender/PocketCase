@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region Common-->
+    <string name="rarityCommonName">Common</string>
+    <color name="rarityCommonColor">#C1B4AF</color>
+    <integer name="rarityCommonChange">500</integer>
+    <!--endregion-->
+
+    <!--region Common-->
+    <string name="rarityUncommonName">Uncommon</string>
+    <color name="rarityUncommonColor">#8C96E1</color>
+    <integer name="rarityUncommonChange">1000</integer>
+    <!--endregion-->
+
+    <!--region Common-->
+    <string name="rarityRareName">Rare</string>
+    <color name="rarityRareColor">#4b69cd</color>
+    <integer name="rarityRareChange">5500</integer>
+    <!--endregion-->
+
+    <!--region Common-->
+    <string name="rarityMythicalName">Mythical</string>
+    <color name="rarityMythicalColor">#8847ff</color>
+    <integer name="rarityMythicalChange">6500</integer>
+    <!--endregion-->
+
+    <!--region Common-->
+    <string name="rarityLegendaryName">Legendary</string>
+    <color name="rarityLegendaryColor">#d32ce6</color>
+    <integer name="rarityLegendaryChange">7500</integer>
+    <!--endregion-->
+
+    <!--region Common-->
+    <string name="rarityAncientName">Ancient</string>
+    <color name="rarityAncientColor">#eb4b4b</color>
+    <integer name="rarityAncientChange">8500</integer>
+    <!--endregion-->
+
+    <!--region Common-->
+    <string name="rarityUniqueName">Unique</string>
+    <color name="rarityUniqueColor">#caab05</color>
+    <integer name="rarityUniqueChange">9500</integer>
+    <!--endregion-->
+</resources>

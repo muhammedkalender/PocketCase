@@ -1,0 +1,2 @@
+rootProject.name='CaseSimulator'
+include ':app'

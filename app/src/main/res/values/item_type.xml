@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="itemTypeRifle">Rifle</string>
+    <string name="itemTypePistol">Pistol</string>
+    <string name="itemTypeSmg">SMG</string>
+    <string name="itemTypeHeavy">Heavy</string>
+    <string name="itemTypeKnife">Knife</string>
+    <string name="itemTypeGlove">Glove</string>
+    <string name="itemTypeSticker">Sticker</string>
+    <string name="itemTypeAutograph">Autograph</string>
+</resources>

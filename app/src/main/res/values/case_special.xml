@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region Glove -->
+    <string name="caseSpecialGloveName">Glove</string>
+    <!--endregion-->
+
+    <!--region Knife -->
+    <string name="caseSpecialKnifeName">Knife</string>
+    <!--endregion-->
+</resources>
