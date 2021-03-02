@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="128dp"
+        android:layout_height="136dp"
+        android:background="@color/colorAccent"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginVertical="8dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/caseOpenCardComponentSkinImageView"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="6dp"
+                android:padding="4px"
+                android:paddingBottom="4dp"
+                android:scaleType="fitXY"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:src="@mipmap/case_special_glove"
+                android:transformPivotY="6dp"></ImageView>
+
+            <TextView
+                android:id="@+id/caseOpenCardComponentNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/rarity_ancient_drawable"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="4dp"
+                android:paddingTop="2dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="MP9"
+                android:textColor="#FFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:transformPivotY="6dp" />
+
+            <TextView
+                android:id="@+id/caseOpenCardComponentSkinNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/rarity_ancient_drawable"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="4dp"
+                android:paddingBottom="4dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="Dart"
+                android:textColor="#FFF"
+                android:textSize="10sp"
+                android:transformPivotY="6dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

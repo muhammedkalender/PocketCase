@@ -2,6 +2,7 @@ package dev.siyah.casesimulator.Models;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import dev.siyah.casesimulator.Enums.Case.CaseSpecialEnum;
@@ -54,4 +55,33 @@ public class CaseModel{
 
     @ColumnInfo(name = "caseActive")
     public boolean active = true;
+
+    public CaseModel() {
+    }
+
+    public CaseModel(@NonNull String name, @NonNull String image, @NonNull CurrencyEnum currency, long price, KeyModel key, @NonNull CaseTypeEnum caseType, @NonNull CaseSpecialEnum caseSpecial, @NonNull RarityEnum[] possibleRarities, @NonNull ComponentEnum possibleComponent) {
+        this.name = name;
+        this.image = image;
+        this.currency = currency;
+        this.price = price;
+        this.key = key;
+        this.caseType = caseType;
+        this.caseSpecial = caseSpecial;
+        this.possibleRarities = possibleRarities;
+        this.possibleComponent = possibleComponent;
+    }
+
+    public CaseModel(long id, @NonNull String name, @NonNull String image, @NonNull CurrencyEnum currency, long price, KeyModel key, @NonNull CaseTypeEnum caseType, @NonNull CaseSpecialEnum caseSpecial, @NonNull RarityEnum[] possibleRarities, @NonNull ComponentEnum possibleComponent, boolean active) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
+        this.currency = currency;
+        this.price = price;
+        this.key = key;
+        this.caseType = caseType;
+        this.caseSpecial = caseSpecial;
+        this.possibleRarities = possibleRarities;
+        this.possibleComponent = possibleComponent;
+        this.active = active;
+    }
 }

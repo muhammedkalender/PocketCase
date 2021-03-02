@@ -5,6 +5,8 @@ import androidx.room.Query;
 
 import java.util.List;
 
+import javax.inject.Singleton;
+
 import dev.siyah.casesimulator.Interfaces.DaoInterface;
 import dev.siyah.casesimulator.Models.ItemModel;
 

@@ -9,6 +9,9 @@ import lombok.NonNull;
 
 public interface DaoInterface<T> {
     @Insert
+    public void insertAll(T[] model);
+
+    @Insert
     public long insert(@NonNull T model);
 
     @Update

@@ -2,6 +2,7 @@ package dev.siyah.casesimulator.Models;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import dev.siyah.casesimulator.Enums.Item.ComponentEnum;
@@ -44,4 +45,16 @@ public class SkinModel {
     public ConditionEnum[] possibleConditions = new ConditionEnum[0];
 
     //endregion
+
+    public SkinModel() {
+    }
+
+    public SkinModel(@NonNull String name, @NonNull String image, @NonNull CaseModel container, @NonNull ItemModel item, @NonNull ComponentEnum[] possibleComponents, @NonNull ConditionEnum[] possibleConditions) {
+        this.name = name;
+        this.image = image;
+        this.container = container;
+        this.item = item;
+        this.possibleComponents = possibleComponents;
+        this.possibleConditions = possibleConditions;
+    }
 }

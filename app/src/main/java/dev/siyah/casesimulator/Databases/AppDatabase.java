@@ -4,6 +4,9 @@ import androidx.room.Database;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
+import javax.inject.Singleton;
+
+import dagger.Binds;
 import dev.siyah.casesimulator.Converters.DefaultConverter;
 import dev.siyah.casesimulator.Converters.EnumConverter;
 import dev.siyah.casesimulator.Converters.ModalConverter;

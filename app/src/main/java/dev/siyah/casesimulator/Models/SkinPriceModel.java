@@ -2,6 +2,7 @@ package dev.siyah.casesimulator.Models;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import dev.siyah.casesimulator.Enums.Item.ComponentEnum;
@@ -36,4 +37,25 @@ public class SkinPriceModel {
 
     @ColumnInfo(name = "skinPriceActive")
     public boolean active = true;
+
+    public SkinPriceModel() {
+    }
+
+    public SkinPriceModel(@NonNull SkinModel skin, @NonNull ComponentEnum component, @NonNull ConditionEnum condition, @NonNull CurrencyEnum currency, long price) {
+        this.skin = skin;
+        this.component = component;
+        this.condition = condition;
+        this.currency = currency;
+        this.price = price;
+    }
+
+    public SkinPriceModel(long id, @NonNull SkinModel skin, @NonNull ComponentEnum component, @NonNull ConditionEnum condition, @NonNull CurrencyEnum currency, long price, boolean active) {
+        this.id = id;
+        this.skin = skin;
+        this.component = component;
+        this.condition = condition;
+        this.currency = currency;
+        this.price = price;
+        this.active = active;
+    }
 }
