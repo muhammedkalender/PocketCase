@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region Easy-->
+    <string name="achievementDifficultNameEasy">Easy</string>
+    <color name="achievementDifficultColorEasy">#4b69cd</color>
+    <!--endregion-->
+
+    <!--region Normal-->
+    <string name="achievementDifficultNameNormal">Normal</string>
+    <color name="achievementDifficultColorNormal">#8847ff</color>
+    <!--endregion-->
+
+    <!--region Hard-->
+    <string name="achievementDifficultNameHard">Hard</string>
+    <color name="achievementDifficultColorHard">#d32ce6</color>
+    <!--endregion-->
+
+    <!--region Extreme-->
+    <string name="achievementDifficultNameExtreme">Extreme</string>
+    <color name="achievementDifficultColorExtreme">#eb4b4b</color>
+    <!--endregion-->
+
+    <!--region Impossible -->
+    <string name="achievementDifficultNameImpossible">Impossible</string>
+    <color name="achievementDifficultColorImpossible">#caab05</color>
+    <!--endregion-->
+</resources>
