@@ -52,10 +52,13 @@ dependencies {
     annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
     //endregion
 
-
-
-    implementation 'org.projectlombok:lombok:1.18.16'
-    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+    //region Lombok
+    def lombok_version = "1.18.16";
+    implementation "org.projectlombok:lombok:$lombok_version"
+    annotationProcessor "org.projectlombok:lombok:$lombok_version"
+    testCompileOnly "org.projectlombok:lombok:$lombok_version"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombok_version"
+    //endregion
 
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])

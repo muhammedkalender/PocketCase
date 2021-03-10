@@ -1,12 +1,11 @@
 package dev.siyah.casesimulator.Enums.Achievement;
 
-import javax.inject.Inject;
-
-import dev.siyah.casesimulator.Helpers.ResourceHelper;
 import dev.siyah.casesimulator.Interfaces.DatabaseEnumInterface;
+import dev.siyah.casesimulator.Interfaces.IdentifiableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.NameableEnumInterface;
 import dev.siyah.casesimulator.R;
 
-public enum AchievementRequirementEnum implements DatabaseEnumInterface {
+public enum AchievementRequirementEnum implements DatabaseEnumInterface, NameableEnumInterface, IdentifiableEnumInterface {
     DYNAMIC {
         @Override
         public int getId() {
@@ -29,13 +28,4 @@ public enum AchievementRequirementEnum implements DatabaseEnumInterface {
             return R.string.achievementRequirementStaticName;
         }
     };
-
-    @Inject
-    ResourceHelper resourceHelper;
-
-    abstract public int getNameId();
-
-    public String getName() {
-        return resourceHelper.getString(getNameId());
-    }
 }

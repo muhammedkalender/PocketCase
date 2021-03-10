@@ -18,7 +18,7 @@ public class ResourceHelper {
     private Context context;
 
     @Inject
-    ResourceHelper(@ApplicationContext Context context) {
+    public ResourceHelper(@ApplicationContext Context context) {
         this.context = context;
     }
 

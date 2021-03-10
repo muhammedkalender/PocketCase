@@ -13,6 +13,7 @@ import dev.siyah.casesimulator.DAOs.StaticDao;
 import dev.siyah.casesimulator.DAOs.UserDao;
 import dev.siyah.casesimulator.DependencyInjections.Modules.AppDatabaseModule;
 import dev.siyah.casesimulator.DependencyInjections.Modules.ContextModule;
+import dev.siyah.casesimulator.DependencyInjections.Modules.HelperModule;
 import dev.siyah.casesimulator.DependencyInjections.Modules.SharedPreferencesModule;
 import dev.siyah.casesimulator.MainActivity;
 
@@ -20,7 +21,8 @@ import dev.siyah.casesimulator.MainActivity;
 @Component(modules = {
         AppDatabaseModule.class,
         ContextModule.class,
-        SharedPreferencesModule.class
+        SharedPreferencesModule.class,
+        HelperModule.class
 })
 @Singleton
 public interface ActivityComponent {

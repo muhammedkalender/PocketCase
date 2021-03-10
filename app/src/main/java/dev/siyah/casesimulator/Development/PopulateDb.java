@@ -2,14 +2,12 @@ package dev.siyah.casesimulator.Development;
 
 import javax.inject.Inject;
 
-import dagger.Binds;
 import dev.siyah.casesimulator.DAOs.CaseDao;
 import dev.siyah.casesimulator.DAOs.ItemDao;
 import dev.siyah.casesimulator.DAOs.KeyDao;
 import dev.siyah.casesimulator.DAOs.SkinDao;
 import dev.siyah.casesimulator.DAOs.SkinPriceDao;
 import dev.siyah.casesimulator.Databases.AppDatabase;
-import dev.siyah.casesimulator.DependencyInjections.ActivityComponent;
 import dev.siyah.casesimulator.Enums.Case.CaseSpecialEnum;
 import dev.siyah.casesimulator.Enums.Case.CaseTypeEnum;
 import dev.siyah.casesimulator.Enums.Item.ComponentEnum;
@@ -22,7 +20,6 @@ import dev.siyah.casesimulator.Models.ItemModel;
 import dev.siyah.casesimulator.Models.KeyModel;
 import dev.siyah.casesimulator.Models.SkinModel;
 import dev.siyah.casesimulator.Models.SkinPriceModel;
-
 
 public class PopulateDb {
     @Inject
@@ -46,8 +43,8 @@ public class PopulateDb {
     @Inject
     SkinPriceDao skinPriceDao;
 
-    @Inject
-    public PopulateDb() {
+    public PopulateDb(AppDatabase appDatabase) {
+        appDatabase.caseDao();
     }
 
     public void example() {

@@ -29,7 +29,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="2"
                 android:src="@mipmap/case_special_glove"
-                android:transformPivotY="6dp"></ImageView>
+                android:transformPivotY="6dp" />
 
             <TextView
                 android:id="@+id/caseOpenCardComponentNameTextView"

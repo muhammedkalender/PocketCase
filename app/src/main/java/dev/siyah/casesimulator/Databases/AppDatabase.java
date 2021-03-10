@@ -4,9 +4,6 @@ import androidx.room.Database;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-import javax.inject.Singleton;
-
-import dagger.Binds;
 import dev.siyah.casesimulator.Converters.DefaultConverter;
 import dev.siyah.casesimulator.Converters.EnumConverter;
 import dev.siyah.casesimulator.Converters.ModalConverter;
@@ -27,7 +24,6 @@ import dev.siyah.casesimulator.Models.SkinModel;
 import dev.siyah.casesimulator.Models.SkinPriceModel;
 import dev.siyah.casesimulator.Models.StaticModel;
 import dev.siyah.casesimulator.Models.UserModel;
-
 
 @Database(
         entities = {
@@ -51,12 +47,19 @@ import dev.siyah.casesimulator.Models.UserModel;
         }
 )
 public abstract class AppDatabase extends RoomDatabase {
-        public abstract CaseDao caseDao();
-        public abstract InventoryItemDao inventoryItemDao();
-        public abstract ItemDao itemDao();
-        public abstract KeyDao keyDao();
-        public abstract SkinDao skinDao();
-        public abstract SkinPriceDao skinPriceDao();
-        public abstract StaticDao staticDao();
-        public abstract UserDao userDao();
+    public abstract CaseDao caseDao();
+
+    public abstract InventoryItemDao inventoryItemDao();
+
+    public abstract ItemDao itemDao();
+
+    public abstract KeyDao keyDao();
+
+    public abstract SkinDao skinDao();
+
+    public abstract SkinPriceDao skinPriceDao();
+
+    public abstract StaticDao staticDao();
+
+    public abstract UserDao userDao();
 }

@@ -1,8 +1,9 @@
 package dev.siyah.casesimulator.Enums.Money;
 
 import dev.siyah.casesimulator.Interfaces.DatabaseEnumInterface;
+import dev.siyah.casesimulator.Interfaces.IdentifiableEnumInterface;
 
-public enum CurrencyEnum implements DatabaseEnumInterface {
+public enum CurrencyEnum implements DatabaseEnumInterface, IdentifiableEnumInterface {
     USD{
         @Override
         public int getId(){

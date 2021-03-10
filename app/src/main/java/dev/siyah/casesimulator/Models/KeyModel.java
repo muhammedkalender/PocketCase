@@ -35,6 +35,7 @@ public class KeyModel {
     public KeyModel() {
     }
 
+    @Ignore
     public KeyModel(@NonNull String name, @NonNull String image, @NonNull CurrencyEnum currency, long price) {
         this.name = name;
         this.image = image;
@@ -42,6 +43,7 @@ public class KeyModel {
         this.price = price;
     }
 
+    @Ignore
     public KeyModel(long id, @NonNull String name, @NonNull String image, @NonNull CurrencyEnum currency, long price, boolean active) {
         this.id = id;
         this.name = name;

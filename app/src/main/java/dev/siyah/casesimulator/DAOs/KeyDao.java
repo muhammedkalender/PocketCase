@@ -7,7 +7,6 @@ import androidx.room.Query;
 import java.util.List;
 
 import dev.siyah.casesimulator.Interfaces.DaoInterface;
-import dev.siyah.casesimulator.Models.ItemModel;
 import dev.siyah.casesimulator.Models.KeyModel;
 
 @Dao

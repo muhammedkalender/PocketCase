@@ -6,10 +6,13 @@ import javax.inject.Inject;
 
 import dev.siyah.casesimulator.Enums.Item.RarityEnum;
 import dev.siyah.casesimulator.Helpers.ResourceHelper;
+import dev.siyah.casesimulator.Interfaces.IdentifiableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.ImaginablyEnumInterface;
+import dev.siyah.casesimulator.Interfaces.NameableEnumInterface;
 import dev.siyah.casesimulator.R;
 
 //TODO NAMES
-public enum CaseSpecialEnum {
+public enum CaseSpecialEnum implements NameableEnumInterface, ImaginablyEnumInterface, IdentifiableEnumInterface {
     GLOVE {
         @Override
         public int getId() {
@@ -74,24 +77,7 @@ public enum CaseSpecialEnum {
         }
     };
 
-    abstract public int getId();
-
-    abstract public int getImageId();
-
-    abstract public int getNameId();
-
     abstract public int getRarityId();
-
-    @Inject
-    ResourceHelper resourceHelper;
-
-    public Drawable getImage() {
-        return this.resourceHelper.getDrawable(getImageId());
-    }
-
-    public String getName() {
-        return resourceHelper.getString(getNameId());
-    }
 
     public RarityEnum getRarity() {
         return RarityEnum.values()[getRarityId()];

@@ -1,12 +1,12 @@
 package dev.siyah.casesimulator.Enums.Item;
 
-import javax.inject.Inject;
-
-import dev.siyah.casesimulator.Helpers.ResourceHelper;
+import dev.siyah.casesimulator.Interfaces.IdentifiableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.NameableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.ShortNameableEnumInterface;
 import dev.siyah.casesimulator.R;
 
 //TODO Load real chances
-public enum ConditionEnum {
+public enum ConditionEnum implements NameableEnumInterface, ShortNameableEnumInterface, IdentifiableEnumInterface {
     BATTLE_SCARRED {
         @Override
         public int getId() {
@@ -14,12 +14,12 @@ public enum ConditionEnum {
         }
 
         @Override
-        int getNameId() {
+        public int getNameId() {
             return R.string.conditionBattleScarredName;
         }
 
         @Override
-        int getShortNameId() {
+        public int getShortNameId() {
             return R.string.conditionBattleScarredShortName;
         }
 
@@ -35,12 +35,12 @@ public enum ConditionEnum {
         }
 
         @Override
-        int getNameId() {
+        public int getNameId() {
             return R.string.conditionWellWornName;
         }
 
         @Override
-        int getShortNameId() {
+        public int getShortNameId() {
             return R.string.conditionWellWornShortName;
         }
 
@@ -56,12 +56,12 @@ public enum ConditionEnum {
         }
 
         @Override
-        int getNameId() {
+        public int getNameId() {
             return R.string.conditionFieldTestedName;
         }
 
         @Override
-        int getShortNameId() {
+        public int getShortNameId() {
             return R.string.conditionFieldTestedShortName;
         }
 
@@ -77,12 +77,12 @@ public enum ConditionEnum {
         }
 
         @Override
-        int getNameId() {
+        public int getNameId() {
             return R.string.conditionMinimalWearName;
         }
 
         @Override
-        int getShortNameId() {
+        public int getShortNameId() {
             return R.string.conditionMinimalWearShortName;
         }
 
@@ -98,12 +98,12 @@ public enum ConditionEnum {
         }
 
         @Override
-        int getNameId() {
+        public int getNameId() {
             return R.string.conditionFactoryNewName;
         }
 
         @Override
-        int getShortNameId() {
+        public int getShortNameId() {
             return R.string.conditionFactoryNewShortName;
         }
 
@@ -113,22 +113,5 @@ public enum ConditionEnum {
         }
     };
 
-    public abstract int getId();
-
-    abstract int getNameId();
-
-    abstract int getShortNameId();
-
     abstract public int getChange();
-
-    public String getName() {
-        return resourceHelper.getString(getNameId(), "");
-    }
-
-    public String getShortName() {
-        return resourceHelper.getString(getShortNameId(), "");
-    }
-
-    @Inject
-    ResourceHelper resourceHelper;
 }

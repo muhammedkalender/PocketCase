@@ -1,15 +1,13 @@
 package dev.siyah.casesimulator.Enums.Item;
 
-import android.graphics.drawable.Drawable;
-
-import javax.inject.Inject;
-
-import dev.siyah.casesimulator.Helpers.ResourceHelper;
 import dev.siyah.casesimulator.Interfaces.DatabaseEnumInterface;
+import dev.siyah.casesimulator.Interfaces.DrawableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.IdentifiableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.NameableEnumInterface;
 import dev.siyah.casesimulator.R;
 
 //TODO
-public enum ItemTypeEnum implements DatabaseEnumInterface {
+public enum ItemTypeEnum implements DatabaseEnumInterface, IdentifiableEnumInterface, NameableEnumInterface, DrawableEnumInterface {
     PISTOL {
         @Override
         public int getId() {
@@ -138,21 +136,4 @@ public enum ItemTypeEnum implements DatabaseEnumInterface {
             return R.mipmap.item_type_glove;
         }
     };
-
-    abstract public int getId();
-
-    abstract public int getNameId();
-
-    abstract public int getDrawableId();
-
-    public Drawable getDrawable() {
-        return resourceHelper.getDrawable(getDrawableId());
-    }
-
-    public String getName() {
-        return resourceHelper.getString(getNameId(), "");
-    }
-
-    @Inject
-    ResourceHelper resourceHelper;
 }

@@ -7,7 +7,6 @@ import androidx.room.Room;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 import dev.siyah.casesimulator.DAOs.CaseDao;

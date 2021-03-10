@@ -1,13 +1,13 @@
 package dev.siyah.casesimulator.Enums.Achievement;
 
-import javax.inject.Inject;
-
-import dev.siyah.casesimulator.Helpers.ResourceHelper;
+import dev.siyah.casesimulator.Interfaces.ColorableEnumInterface;
 import dev.siyah.casesimulator.Interfaces.DatabaseEnumInterface;
+import dev.siyah.casesimulator.Interfaces.IdentifiableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.NameableEnumInterface;
 import dev.siyah.casesimulator.R;
 
-public enum AchievementDifficultEnum implements DatabaseEnumInterface {
-    EASY{
+public enum AchievementDifficultEnum implements DatabaseEnumInterface, NameableEnumInterface, ColorableEnumInterface, IdentifiableEnumInterface {
+    EASY {
         @Override
         public int getId() {
             return 0;
@@ -23,7 +23,7 @@ public enum AchievementDifficultEnum implements DatabaseEnumInterface {
             return R.color.achievementDifficultColorEasy;
         }
     },
-    NORMAL{
+    NORMAL {
         @Override
         public int getId() {
             return 1;
@@ -39,7 +39,7 @@ public enum AchievementDifficultEnum implements DatabaseEnumInterface {
             return R.color.achievementDifficultColorNormal;
         }
     },
-    HARD{
+    HARD {
         @Override
         public int getId() {
             return 2;
@@ -55,7 +55,7 @@ public enum AchievementDifficultEnum implements DatabaseEnumInterface {
             return R.color.achievementDifficultColorHard;
         }
     },
-    EXTREME{
+    EXTREME {
         @Override
         public int getId() {
             return 3;
@@ -71,7 +71,7 @@ public enum AchievementDifficultEnum implements DatabaseEnumInterface {
             return R.color.achievementDifficultColorExtreme;
         }
     },
-    IMPOSSIBLE{
+    IMPOSSIBLE {
         @Override
         public int getId() {
             return 4;
@@ -87,19 +87,4 @@ public enum AchievementDifficultEnum implements DatabaseEnumInterface {
             return R.color.achievementDifficultColorImpossible;
         }
     };
-
-    @Inject
-    ResourceHelper resourceHelper;
-
-    abstract public int getNameId();
-
-    public String getName() {
-        return resourceHelper.getString(getNameId());
-    }
-
-    abstract public int getColorId();
-
-    public String getColor() {
-        return resourceHelper.getString(getNameId());
-    }
 }

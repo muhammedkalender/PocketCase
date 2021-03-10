@@ -3,6 +3,7 @@ package dev.siyah.casesimulator.Helpers;
 import org.junit.Test;
 
 public class LogHelperTest {
+    @SuppressWarnings("ConstantConditions")
     @Test(expected = NullPointerException.class)
     public void testErrorNullException() {
         LogHelper logHelper = new LogHelper();

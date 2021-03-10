@@ -49,6 +49,7 @@ public class SkinModel {
     public SkinModel() {
     }
 
+    @Ignore
     public SkinModel(@NonNull String name, @NonNull String image, @NonNull CaseModel container, @NonNull ItemModel item, @NonNull ComponentEnum[] possibleComponents, @NonNull ConditionEnum[] possibleConditions) {
         this.name = name;
         this.image = image;

@@ -5,8 +5,9 @@ import androidx.room.Ignore;
 
 import dev.siyah.casesimulator.Enums.Variable.VariableEnum;
 import dev.siyah.casesimulator.Interfaces.DatabaseEnumInterface;
+import dev.siyah.casesimulator.Interfaces.IdentifiableEnumInterface;
 
-public enum StaticTypeEnum implements DatabaseEnumInterface {
+public enum StaticTypeEnum implements DatabaseEnumInterface, IdentifiableEnumInterface {
     INTEGER {
         @Override
         public int getId() {

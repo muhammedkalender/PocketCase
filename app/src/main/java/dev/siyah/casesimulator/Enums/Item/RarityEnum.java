@@ -1,15 +1,14 @@
 package dev.siyah.casesimulator.Enums.Item;
 
-import android.graphics.drawable.Drawable;
-
-import javax.inject.Inject;
-
-import dev.siyah.casesimulator.Helpers.ResourceHelper;
+import dev.siyah.casesimulator.Interfaces.ColorableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.DrawableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.IdentifiableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.NameableEnumInterface;
 import dev.siyah.casesimulator.R;
 
 //TODO Load real chances
 //TODO GET CHANCE, FROM MODEL ( ID )
-public enum RarityEnum {
+public enum RarityEnum implements IdentifiableEnumInterface, NameableEnumInterface, ColorableEnumInterface, DrawableEnumInterface {
     COMMON {
         @Override
         public int getId() {
@@ -22,8 +21,8 @@ public enum RarityEnum {
         }
 
         @Override
-        public int getColor() {
-            return resourceHelper.getColor(R.color.rarityCommonColor, -1);
+        public int getColorId() {
+            return R.color.rarityCommonColor;
         }
 
         @Override
@@ -48,8 +47,8 @@ public enum RarityEnum {
         }
 
         @Override
-        public int getColor() {
-            return resourceHelper.getColor(R.color.rarityUncommonColor);
+        public int getColorId() {
+            return R.color.rarityUncommonColor;
         }
 
         @Override
@@ -74,8 +73,8 @@ public enum RarityEnum {
         }
 
         @Override
-        public int getColor() {
-            return resourceHelper.getColor(R.color.rarityRareColor);
+        public int getColorId() {
+            return R.color.rarityRareColor;
         }
 
         @Override
@@ -100,8 +99,8 @@ public enum RarityEnum {
         }
 
         @Override
-        public int getColor() {
-            return resourceHelper.getColor(R.color.rarityMythicalColor);
+        public int getColorId() {
+            return R.color.rarityMythicalColor;
         }
 
         @Override
@@ -126,8 +125,8 @@ public enum RarityEnum {
         }
 
         @Override
-        public int getColor() {
-            return resourceHelper.getColor(R.color.rarityLegendaryColor);
+        public int getColorId() {
+            return R.color.rarityLegendaryColor;
         }
 
         @Override
@@ -152,8 +151,8 @@ public enum RarityEnum {
         }
 
         @Override
-        public int getColor() {
-            return resourceHelper.getColor(R.color.rarityAncientColor);
+        public int getColorId() {
+            return R.color.rarityAncientColor;
         }
 
         @Override
@@ -178,8 +177,8 @@ public enum RarityEnum {
         }
 
         @Override
-        public int getColor() {
-            return resourceHelper.getColor(R.color.rarityUniqueColor);
+        public int getColorId() {
+            return R.color.rarityUniqueColor;
         }
 
         @Override
@@ -193,28 +192,5 @@ public enum RarityEnum {
         }
     };
 
-    abstract public int getId();
-
-    abstract public int getNameId();
-
-    abstract public int getColor();
-
     abstract public int getChange();
-
-    abstract public int getDrawableId();
-
-    public Drawable getDrawable() {
-        return resourceHelper.getDrawable(getDrawableId());
-    }
-
-    public String getName() {
-        return resourceHelper.getString(getNameId(), "");
-    }
-
-    @Inject
-    ResourceHelper resourceHelper;
-
-    RarityEnum() {
-
-    }
 }

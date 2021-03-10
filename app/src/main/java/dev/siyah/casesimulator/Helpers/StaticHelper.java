@@ -14,10 +14,6 @@ public class StaticHelper {
         //TODO
 
         //TODO Daha düzğün bir yöntemi olmalı
-        value = Long.parseLong(
-                String.valueOf(value)
-                        .replace(",", "")
-        );
 
         return true;
     }

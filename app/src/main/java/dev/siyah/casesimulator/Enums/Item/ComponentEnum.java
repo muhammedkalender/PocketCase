@@ -1,14 +1,12 @@
 package dev.siyah.casesimulator.Enums.Item;
 
-import android.graphics.drawable.Drawable;
-
-import javax.inject.Inject;
-
-import dev.siyah.casesimulator.Helpers.ResourceHelper;
+import dev.siyah.casesimulator.Interfaces.IconableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.IdentifiableEnumInterface;
+import dev.siyah.casesimulator.Interfaces.NameableEnumInterface;
 import dev.siyah.casesimulator.R;
 
 //TODO Load real chances
-public enum ComponentEnum {
+public enum ComponentEnum implements IdentifiableEnumInterface, NameableEnumInterface, IconableEnumInterface {
     NORMAL {
         @Override
         public int getChance() {
@@ -63,27 +61,4 @@ public enum ComponentEnum {
     };
 
     abstract public int getChance();
-
-    abstract public int getIconId();
-
-    abstract public int getId();
-
-    abstract public int getNameId();
-
-    abstract public int getSmallIconId();
-
-    public Drawable getIcon() {
-        return resourceHelper.getDrawable(getIconId());
-    }
-
-    public String getName() {
-        return resourceHelper.getString(getId(), "");
-    }
-
-    public Drawable getSmallIcon() {
-        return resourceHelper.getDrawable(getSmallIconId());
-    }
-
-    @Inject
-    ResourceHelper resourceHelper;
 }

@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import dev.siyah.casesimulator.Enums.Case.CaseTypeEnum;
-import dev.siyah.casesimulator.Interfaces.DatabaseEnumInterface;
 
 import static org.junit.Assert.*;
 

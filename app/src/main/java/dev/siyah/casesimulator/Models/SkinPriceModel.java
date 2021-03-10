@@ -41,6 +41,7 @@ public class SkinPriceModel {
     public SkinPriceModel() {
     }
 
+    @Ignore
     public SkinPriceModel(@NonNull SkinModel skin, @NonNull ComponentEnum component, @NonNull ConditionEnum condition, @NonNull CurrencyEnum currency, long price) {
         this.skin = skin;
         this.component = component;
@@ -49,6 +50,7 @@ public class SkinPriceModel {
         this.price = price;
     }
 
+    @Ignore
     public SkinPriceModel(long id, @NonNull SkinModel skin, @NonNull ComponentEnum component, @NonNull ConditionEnum condition, @NonNull CurrencyEnum currency, long price, boolean active) {
         this.id = id;
         this.skin = skin;

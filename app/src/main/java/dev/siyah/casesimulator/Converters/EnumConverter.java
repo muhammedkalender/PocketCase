@@ -1,10 +1,6 @@
 package dev.siyah.casesimulator.Converters;
 
-import android.content.SharedPreferences;
-
 import androidx.room.TypeConverter;
-
-import javax.inject.Inject;
 
 import dev.siyah.casesimulator.Enums.Case.CaseSpecialEnum;
 import dev.siyah.casesimulator.Enums.Case.CaseTypeEnum;
@@ -22,7 +18,6 @@ public  class  EnumConverter {
     EnumHelper enumHelper;
 
     public EnumConverter() {
-        enumHelper = new EnumHelper();
         String a = "asdas";
     }
 

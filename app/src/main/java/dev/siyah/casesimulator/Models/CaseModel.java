@@ -59,6 +59,7 @@ public class CaseModel{
     public CaseModel() {
     }
 
+    @Ignore
     public CaseModel(@NonNull String name, @NonNull String image, @NonNull CurrencyEnum currency, long price, KeyModel key, @NonNull CaseTypeEnum caseType, @NonNull CaseSpecialEnum caseSpecial, @NonNull RarityEnum[] possibleRarities, @NonNull ComponentEnum possibleComponent) {
         this.name = name;
         this.image = image;
@@ -71,6 +72,7 @@ public class CaseModel{
         this.possibleComponent = possibleComponent;
     }
 
+    @Ignore
     public CaseModel(long id, @NonNull String name, @NonNull String image, @NonNull CurrencyEnum currency, long price, KeyModel key, @NonNull CaseTypeEnum caseType, @NonNull CaseSpecialEnum caseSpecial, @NonNull RarityEnum[] possibleRarities, @NonNull ComponentEnum possibleComponent, boolean active) {
         this.id = id;
         this.name = name;

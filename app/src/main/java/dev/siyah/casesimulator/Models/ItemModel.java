@@ -32,12 +32,14 @@ public class ItemModel {
     public ItemModel() {
     }
 
+    @Ignore
     public ItemModel(@NonNull String name, @NonNull String image, @NonNull ItemTypeEnum itemType) {
         this.name = name;
         this.image = image;
         this.itemType = itemType;
     }
 
+    @Ignore
     public ItemModel(long id, @NonNull String name, @NonNull String image, @NonNull ItemTypeEnum itemType, boolean active) {
         this.id = id;
         this.name = name;

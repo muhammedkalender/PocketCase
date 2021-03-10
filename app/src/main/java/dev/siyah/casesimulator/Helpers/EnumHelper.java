@@ -3,21 +3,22 @@ package dev.siyah.casesimulator.Helpers;
 import androidx.annotation.Nullable;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
 
-import dev.siyah.casesimulator.Enums.Money.CurrencyEnum;
 import dev.siyah.casesimulator.Interfaces.DatabaseEnumInterface;
+import dev.siyah.casesimulator.Interfaces.NameableEnumInterface;
 import lombok.NonNull;
 
 public class EnumHelper {
+    ResourceHelper resourceHelper;
+
     @Inject
-    public EnumHelper() {
+    public EnumHelper(ResourceHelper resourceHelper) {
+        this.resourceHelper = resourceHelper;
     }
 
     @NonNull
@@ -41,7 +42,7 @@ public class EnumHelper {
         }
 
         for (Object databaseEnumInterface : enums) {
-            strings.add(((DatabaseEnumInterface)databaseEnumInterface).getId());
+            strings.add(((DatabaseEnumInterface) databaseEnumInterface).getId());
         }
 
         return new Gson()
@@ -76,5 +77,9 @@ public class EnumHelper {
         }
 
         return resultArray;
+    }
+
+    public String getName(@NonNull NameableEnumInterface nameableEnum) {
+        return resourceHelper.getString(nameableEnum.getNameId());
     }
 }
