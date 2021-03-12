@@ -11,23 +11,27 @@ import androidx.annotation.Nullable;
 import javax.inject.Inject;
 
 import dev.siyah.casesimulator.Helpers.GlideHelper;
+import dev.siyah.casesimulator.Interfaces.ComponentInterface;
 import dev.siyah.casesimulator.Models.SkinModel;
 import dev.siyah.casesimulator.R;
 import lombok.NonNull;
 
-public class CaseOpenCardComponent {
+public class CaseOpenCardComponent implements ComponentInterface<SkinModel> {
     @Inject
     Context context;
 
     @Inject
     GlideHelper glideHelper;
 
-    public View generatedView(@NonNull SkinModel skinModel) throws NullPointerException {
-        return generatedView(skinModel, null);
+    @Nullable
+    @Override
+    public View generateView(@NonNull SkinModel skinModel) throws NullPointerException {
+        return generateView(skinModel, null);
     }
 
-    @NonNull
-    public View generatedView(@NonNull SkinModel skinModel, @Nullable ViewGroup root) throws NullPointerException {
+    @Nullable
+    @Override
+    public View generateView(@NonNull SkinModel skinModel, @Nullable ViewGroup root) throws NullPointerException {
         LayoutInflater inflater = ((Activity) context).getLayoutInflater();
 
         View view = inflater.inflate(R.layout.component_case_open_card, root);
