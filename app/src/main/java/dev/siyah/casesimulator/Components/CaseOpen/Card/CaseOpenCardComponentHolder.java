@@ -1,4 +1,4 @@
-package dev.siyah.casesimulator.Components.CaseOpen;
+package dev.siyah.casesimulator.Components.CaseOpen.Card;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -25,10 +25,16 @@ public class CaseOpenCardComponentHolder {
     @Setter
     private ImageView image;
 
-    public CaseOpenCardComponentHolder(@NonNull  View view) {
+    @NonNull
+    @Getter
+    @Setter
+    private ImageView backgroundImage;
+
+    public CaseOpenCardComponentHolder(@NonNull View view) {
         itemName = view.findViewById(R.id.caseOpenCardComponentNameTextView);
         skinName = view.findViewById(R.id.caseOpenCardComponentSkinNameTextView);
 
+        backgroundImage = view.findViewById(R.id.caseOpenCardComponentSkinImageBackgroundView);
         image = view.findViewById(R.id.caseOpenCardComponentSkinImageView);
     }
 }

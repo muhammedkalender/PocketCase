@@ -9,6 +9,9 @@ import lombok.NonNull;
 
 public interface ComponentInterface<T> {
     @Nullable
+    public View generateView(@Nullable ViewGroup root) throws NullPointerException;
+
+    @Nullable
     public View generateView(@NonNull T model) throws NullPointerException;
 
     @Nullable

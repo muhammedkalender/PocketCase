@@ -30,6 +30,11 @@ public enum CaseSpecialEnum implements NameableEnumInterface, ImaginablyEnumInte
         }
 
         @Override
+        public int getSkinNameId() {
+            return R.string.caseSpecialGloveSkinName;
+        }
+
+        @Override
         public int getRarityId() {
             return RarityEnum.UNIQUE.getId();
         }
@@ -48,6 +53,11 @@ public enum CaseSpecialEnum implements NameableEnumInterface, ImaginablyEnumInte
         @Override
         public int getNameId() {
             return R.string.caseSpecialKnifeName;
+        }
+
+        @Override
+        public int getSkinNameId() {
+            return R.string.caseSpecialKnifeSkinName;
         }
 
         @Override
@@ -72,11 +82,17 @@ public enum CaseSpecialEnum implements NameableEnumInterface, ImaginablyEnumInte
         }
 
         @Override
+        public int getSkinNameId() {
+            return 0;
+        }
+
+        @Override
         public int getRarityId() {
             return 0;
         }
     };
 
+    abstract public int getSkinNameId();
     abstract public int getRarityId();
 
     public RarityEnum getRarity() {

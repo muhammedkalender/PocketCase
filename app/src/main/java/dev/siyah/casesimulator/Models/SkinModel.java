@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey;
 
 import dev.siyah.casesimulator.Enums.Item.ComponentEnum;
 import dev.siyah.casesimulator.Enums.Item.ConditionEnum;
+import dev.siyah.casesimulator.Enums.Item.RarityEnum;
 import lombok.NonNull;
 
 @Entity(tableName = "skins")
@@ -22,6 +23,10 @@ public class SkinModel {
     @NonNull
     @ColumnInfo(name = "skinImage")
     public String image;
+
+    @NonNull
+    @ColumnInfo(name = "skinRarity")
+    public RarityEnum rarity;
 
     @NonNull
     @ColumnInfo(name = "skinCase")

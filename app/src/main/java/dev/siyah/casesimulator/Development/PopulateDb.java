@@ -43,6 +43,7 @@ public class PopulateDb {
     @Inject
     SkinPriceDao skinPriceDao;
 
+    @Inject
     public PopulateDb(AppDatabase appDatabase) {
         appDatabase.caseDao();
     }

@@ -16,20 +16,32 @@
             android:layout_marginVertical="8dp"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/caseOpenCardComponentSkinImageView"
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="wrap_content"
                 android:layout_height="90dp"
-                android:background="@color/colorPrimaryDark"
                 android:elevation="6dp"
                 android:padding="4px"
                 android:paddingBottom="4dp"
-                android:scaleType="fitXY"
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="2"
-                android:src="@mipmap/case_special_glove"
-                android:transformPivotY="6dp" />
+                android:transformPivotY="6dp">
+
+                <ImageView
+                    android:id="@+id/caseOpenCardComponentSkinImageBackgroundView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rarity_uncommon_drawable"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/caseOpenCardComponentSkinImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/case_special_glove" />
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/caseOpenCardComponentNameTextView"

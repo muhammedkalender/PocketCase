@@ -2,9 +2,11 @@
 <resources>
     <!--region Glove -->
     <string name="caseSpecialGloveName">Glove</string>
+    <string name="caseSpecialGloveSkinName">Rare Special</string>
     <!--endregion-->
 
     <!--region Knife -->
     <string name="caseSpecialKnifeName">Knife</string>
+    <string name="caseSpecialKnifeSkinName">Rare Special</string>
     <!--endregion-->
 </resources>

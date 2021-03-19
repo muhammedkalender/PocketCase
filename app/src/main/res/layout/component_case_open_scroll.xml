@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/caseOpenScrollComponentScrollContainer"
+        android:layout_width="360dp"
+        android:layout_height="152dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:scaleType="fitXY" />
+
+        <HorizontalScrollView
+            android:id="@+id/caseOpenScrollComponentScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:scrollbars="none"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/caseOpenScrollComponentScrollList"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

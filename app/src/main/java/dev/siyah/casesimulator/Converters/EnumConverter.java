@@ -7,6 +7,7 @@ import dev.siyah.casesimulator.Enums.Case.CaseTypeEnum;
 import dev.siyah.casesimulator.Enums.Item.ComponentEnum;
 import dev.siyah.casesimulator.Enums.Item.ConditionEnum;
 import dev.siyah.casesimulator.Enums.Item.ItemTypeEnum;
+import dev.siyah.casesimulator.Enums.Item.RarityEnum;
 import dev.siyah.casesimulator.Enums.Money.CurrencyEnum;
 import dev.siyah.casesimulator.Enums.ProfileRank.ProfileRankEnum;
 import dev.siyah.casesimulator.Enums.SkillGroup.SkillGroupEnum;
@@ -118,6 +119,19 @@ public  class  EnumConverter {
     }
     //endregion
 
+    //region Rarity Enum
+
+    @TypeConverter
+    public RarityEnum rarityEnumFromId(int id) {
+        return enumHelper.getById(RarityEnum.values(), id);
+    }
+
+    @TypeConverter
+    public int rarityEnumToId(RarityEnum rarityEnum) {
+        return rarityEnum.getId();
+    }
+
+    //endregion
 
     //region Skill Group Enum
 
